@@ -1,0 +1,49 @@
+{ 
+  "cloud":true,
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/introduction/introduction",
+    "pages/recommend/recommend",
+    "pages/mypage/mypage",
+    "pages/publish/publish",
+    "pages/homeDetail/homeDetail",
+    "pages/collection/collection",
+    "pages/history/history",
+    "pages/comment/comment"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#268dcd",
+    "navigationBarTitleText": "丝巾推荐",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#268dcd",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/introduction/introduction",
+        "text": "社区",
+        "iconPath": "images/silk_625px_1224517_easyicon.net.png",
+        "selectedIconPath": "images/silk_625px_1224537_easyicon.net.png"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐",
+        "iconPath": "images/推荐1.png",
+        "selectedIconPath": "images/推荐2.png"
+      },
+      {
+        "pagePath": "pages/mypage/mypage",
+        "text": "我的",
+        "iconPath": "images/我的1.png",
+        "selectedIconPath": "images/我的2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,48 @@
+<!--pages/recommend/recommend.wxml-->
+<view>
+  <form bindsubmit='formsubmit'>
+  
+</form>
+
+  <view class='text_view_size'>
+    <text class="text_size">请上传您的生活照</text>
+    <text class="text_size">我们将为您推荐适合您的丝巾产品</text>
+  </view>
+  
+  <view class='image_view_size'>
+    <image src="{{image_src}}" style="width: 200px; height: 200px;"></image>
+  </view>
+  <view class="button_view_size">
+    <button class='button_size' bindtap='chooseimage'>
+      <view class='button_font'>上传图片</view>  
+    </button>
+  </view>
+  <view class='progress_view_size'>
+    <progress active='true' percent="{{progress}}" show-info='true'/>
+    <text class="text_size">上传进度</text>
+  </view>
+  <view class='text_view_size'>
+    <text class="text_size">{{line_1}} </text>
+    <text class="text_size">{{line_2}}{{age}}{{line_3}}</text>
+    <text class="text_size">{{line_4}}{{gender}}{{line_5}}</text>
+    <text class="text_size">{{line_6}}{{hair_color}}{{hair_length}}</text>
+    <text class="text_size">{{line_7}}{{hair_bang}}</text>
+    <text class="text_size">{{line_8}}</text>
+    <text class="text_size">{{line_9}}</text>
+    
+  </view>
+
+  <view>
+    <button class='button_size' bindtap='findimage'data-gender='{{gender}}' data-hair_length='{{hair_length}}' data-hair_color='{{hair_color}}' data-age='{{age}}'>
+    <view class='button_font'>查收您的专属丝巾</view>
+    </button>  
+  </view>
+  <!--遮罩层-->
+  <view class='shade' hidden='{{flag}}'>
+    <image class='closeImg' src='cloud://test-529d6c.7465-test-529d6c/关闭2.png' bindtap='hide'></image>
+    <view class='image_view_size2'>
+      <image class="imgform" src='{{picture}}'></image>
+    </view> 
+    <view class='text_view_size'>{{ msg }}</view>
+  </view>
+</view>

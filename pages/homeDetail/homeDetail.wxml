@@ -1,0 +1,71 @@
+<!--miniprogram/pages/homeDetail/homeDetail.wxml-->
+<view class='container'>
+  <view class='container-content'>
+    <view class='user-info'>
+      <image class='user-head' src='{{topic.user.avatarUrl}}' mode='aspectFill'></image>
+      <view class='user-name-time'>
+        <view class='user-name'>{{topic.user.nickName}}</view>
+        <view class='user-publish-time'>{{topic.date}}</view>
+      </view>
+    </view>
+    <view class='content'>
+      <!-- 显示文本 -->
+      <view wx:if="{{topic.content != ''}} && {{topic.images.length > 0}}">
+        <text class='content-text'>{{topic.content}}</text>
+        <block wx:for="{{topic.images}}" wx:for-index="idx">
+          <image class='content-img' src='{{item}}' mode='aspectFill' bindtap="previewImg" data-index='{{idx}}'></image>
+        </block>
+      </view>
+      <!-- 显示图片 -->
+      <view wx:elif="{{topic.images.length > 0}}">
+        <block wx:for="{{topic.images}}" wx:for-index="idx">
+          <image class='content-img' src='{{item}}' mode='aspectFill' bindtap="previewImg" data-index='{{idx}}'></image>
+        </block>
+      </view>
+      <!-- 显示文本 -->
+      <block wx:else>
+        <text class='content-text'>{{topic.content}}</text>
+      </block>
+    </view>
+  </view>
+  <!-- 显示回复列表 -->
+  <view class='comment-view'>  
+    <view class='replay_content' wx:if="{{replays.length > 0}}">
+      <text class='tip-text'>----------------评论区---------------</text>
+      <block wx:for="{{replays}}" wx:for-index="idx">
+        <text >{{item.user.nickName}} : {{item.content}}</text>
+      </block>
+   </view>
+  </view>   
+
+  <view class='smallbtn-view'>
+  <view class='smallbtn1'>
+    <view class='like-container' bindtap='onUpClick' wx:if='{{isUp}}'>
+      <image class='like-icon' src='../../images/已赞.png'></image>
+      <text class='like-text'>已赞</text>
+    </view>
+    <view class='like-container' bindtap='onUpClick' wx:else>
+      <image class='like-icon' src='../../images/未赞.png'></image>
+      <text class='like-text'>点赞</text>
+    </view>
+  </view>
+  <view class='smallbtn1'>
+    <view class='like-container' bindtap='onCommentClick'>
+      <image class='like-icon' src='../../images/评论.png'></image>
+      <text class='like-text'>评论</text>
+    </view>
+  </view>
+  <view class='smallbtn1'>
+    <view class='like-container' bindtap='onLikeClick' wx:if='{{isLike}}'>
+      <image class='like-icon' src='../../images/已收藏.png'></image>
+      <text class='like-text'>已收藏</text>
+    </view>
+    <view class='like-container' bindtap='onLikeClick' wx:else>
+      <image class='like-icon' src='../../images/收藏.png'></image>
+      <text class='like-text'>收藏</text>
+    </view>
+  </view>
+</view>
+</view>
+
+

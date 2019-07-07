@@ -1,0 +1,32 @@
+/* pages/welcome/welcome.wxss */
+.welcome-container{
+  display:flex; 
+  flex-direction:column;
+  align-items: center;
+}
+
+.motto-container{
+  background: linear-gradient(to right, rgb(255, 255, 255) , rgb(214, 33, 160));
+  width:350rpx;
+  height: 100rpx;
+  text-align: center;
+  border-radius: 98rpx;
+  margin-top: 900rpx;
+  
+}
+
+.button_font{
+  
+  font-size: 33rpx;
+  font-weight: bold;
+  line-height: 95rpx;
+  color:azure;
+  
+}
+
+page{
+  height: 100%;
+  background-image:url(https://7465-test-04886c-1258831114.tcb.qcloud.la/%E6%AC%A2%E8%BF%8E%E9%A1%B51.jpg?sign=8782fef06daba977554cab8dc78b0c0d&t=1558407291);
+  background-repeat: no-repeat;
+
+}

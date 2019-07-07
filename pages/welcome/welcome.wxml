@@ -1,0 +1,5 @@
+<view class='welcome-container'>
+  <button class="motto-container" bindtap='Ontap'>
+    <view class='button_font'>开启丝友圈 </view>
+  </button>  
+</view>

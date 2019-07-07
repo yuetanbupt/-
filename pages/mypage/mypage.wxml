@@ -1,0 +1,87 @@
+<!--pages/mypage/mypage.wxml-->
+<view class='amountBg'>
+  <view class='img'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class='account'>
+    <view class='nick-name'>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <view class='address'>
+      <open-data type="userProvince" lang="zh_CN"></open-data>·
+      <open-data type="userCity" lang="zh_CN"></open-data>
+    </view>
+  </view>
+</view>
+
+<!-- 底部列表 -->
+<view class='content'>
+  <!-- 收藏列表 -->
+   <view class='line'></view>
+  <view class='item' bindtap='onCollectionClick'>
+    <view class='icon'>
+      <image src='../../images/collect.png' style="width:22px;height:21px;"></image>
+    </view>
+    <view class='itemName'>
+      <view>我收藏的</view>
+    </view>
+    <view class='right'>></view>
+  </view>
+ 
+  <!-- 发布历史 -->
+  <view class='hr'></view>
+  <view class='item' bindtap='onHistoryClick'>
+    <view class='icon'>
+      <image src='../../images/history.png' style="width:22px;height:21px;"></image>
+    </view>
+    <view class='itemName'>
+      <view>发布历史</view>
+    </view>
+    <view class='right'>></view>
+  </view>
+  <!--发布内容-->
+  <view class='line'></view>
+  <view class='hr'></view>
+    <view class='hr'></view>
+  <view class='item' bindtap='onPublishClick'>
+    <view class='icon'>
+      <image src='../../images/发布.png' style="width:22px;height:21px;"></image>
+    </view>
+    <view class='itemName'>
+      <view>发布内容</view>
+    </view>
+    <view class='right'>></view>
+  </view>
+  <!-- 关于我们 -->
+  <view class='item'  bindtap='about_us'>
+    <view class='icon'>
+      <image src='../../images/关于我们.png' style="width:22px;height:21px;"></image>
+    </view>
+    <view class='itemName'>
+      <view>关于我们</view>
+    </view>
+    <view class='right'>></view>
+  </view>
+  <view class='hr'></view>
+</view>
+
+
+<!--遮罩层-->
+<view class='shade' hidden='{{flag}}'>
+  <image class='closeImg' bindtap='hide' src='cloud://test-529d6c.7465-test-529d6c/关闭.png'></image>
+  <view class='image_view_size'>
+    <image class='image_size' src='cloud://test-529d6c.7465-test-529d6c/商标.JPG'></image>
+  </view>
+  <view class='text_view_size'>
+    <text class='text_size'>关于我们</text>
+  </view>
+  <view class='team_view_size'>
+    <text class='team_size'>岳潭  郝凌翔  岳恒</text>
+  </view>
+  <view class='team_view_size'>
+    <text class='team_size'>北邮团队研发</text>
+  </view>
+  <view class='team_view_size'>
+    <text class='team_size'>联系邮箱：2247465788@qq.com</text>
+  </view>
+</view>
